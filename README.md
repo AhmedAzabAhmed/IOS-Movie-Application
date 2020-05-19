@@ -11,3 +11,5 @@ Allow the user to tap on a movie poster and transition to a details screen with 
 • release date allow users to view and play trailers in the youtube. 
 allow users to read reviews of a selected movie. allow users to mark a movie as a favorite in the details view by tapping a button(star).
 
+video of application 
+https://www.youtube.com/watch?v=z1eh5JheBVk&t=4s

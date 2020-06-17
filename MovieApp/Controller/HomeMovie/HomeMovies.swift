@@ -14,7 +14,7 @@ import DropDown
 
 private let reuseIdentifier = "Cell"
 
-class HomeMovies: UICollectionViewController {
+class HomeMovies: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var movieData : MovieData?
     
@@ -90,6 +90,14 @@ class HomeMovies: UICollectionViewController {
             cell.movieImage.sd_setImage(with:URL(string: myMovies![indexPath.row].posterPath!), placeholderImage:UIImage(named: "a.jpg"))
         }
         
+        cell.movieImage.layer.cornerRadius = 10
+        //        cell.labRating.rating = 3
+        
+        cell.contentView.layer.cornerRadius = 15
+        cell.contentView.layer.borderWidth = 5.0
+        //        cell.contentView.layer.borderColor = UIColor.white.cgColor
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        
         return cell
     }
     
@@ -105,6 +113,19 @@ class HomeMovies: UICollectionViewController {
         
         self.navigationController?.pushViewController(movieData!, animated: true)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        //        let viewHeight = view.frame.size.height
+        let viewWidth = view.frame.size.width
+        
+        if view.frame.size.width > view.frame.size.height {
+            return CGSize(width: viewWidth * 0.25, height: 240)
+        }
+        else {
+            return CGSize(width: (viewWidth * 0.5), height: 240)
+        }
+    }
 }
 extension HomeMovies : IHomeView{
     
@@ -117,7 +138,7 @@ extension HomeMovies : IHomeView{
     }
     
     func showLoading() {
-       
+        
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true

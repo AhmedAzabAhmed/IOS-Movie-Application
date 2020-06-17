@@ -35,17 +35,13 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-YX-lOx">
                                             <rect key="frame" x="8" y="8" width="167" height="210"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="210" id="K0F-pl-CU5"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="Sq5-Kz-daW"/>
-                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="SKK-YX-lOx" firstAttribute="leading" secondItem="APs-Dq-l93" secondAttribute="leading" constant="8" id="Ooj-6f-mRa"/>
-                                        <constraint firstAttribute="bottom" secondItem="SKK-YX-lOx" secondAttribute="bottom" constant="8" id="Or2-NS-1Xj"/>
-                                        <constraint firstItem="SKK-YX-lOx" firstAttribute="top" secondItem="APs-Dq-l93" secondAttribute="top" constant="8" id="csm-dD-N26"/>
-                                        <constraint firstAttribute="trailing" secondItem="SKK-YX-lOx" secondAttribute="trailing" constant="8" id="q1H-aG-f8J"/>
+                                        <constraint firstItem="SKK-YX-lOx" firstAttribute="centerX" secondItem="APs-Dq-l93" secondAttribute="centerX" id="4X7-Wq-7rh"/>
+                                        <constraint firstItem="SKK-YX-lOx" firstAttribute="top" secondItem="APs-Dq-l93" secondAttribute="topMargin" id="67K-8H-2V4"/>
+                                        <constraint firstItem="SKK-YX-lOx" firstAttribute="leading" secondItem="APs-Dq-l93" secondAttribute="leadingMargin" id="8I8-jk-6Lg"/>
+                                        <constraint firstItem="SKK-YX-lOx" firstAttribute="centerY" secondItem="APs-Dq-l93" secondAttribute="centerY" id="Eq1-0l-JZO"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="183" height="226"/>

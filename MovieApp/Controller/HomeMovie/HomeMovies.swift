@@ -62,8 +62,7 @@ class HomeMovies: UICollectionViewController, UICollectionViewDelegateFlowLayout
         }
         // Will set a custom width instead of the anchor view width
         dropDown.width = 200
-        //   dropDown.hide()
-        
+        //   dropDown.hide()        
     }
     
     // MARK: UICollectionViewDataSource

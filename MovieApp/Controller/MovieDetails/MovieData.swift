@@ -57,7 +57,7 @@ class MovieData: UITableViewController {
         // to round btn review corners
         reviewBtnRound.layer.cornerRadius = 15
         reviewBtnRound.clipsToBounds = true
-        
+        cosmosView.settings.updateOnTouch = false
         cosmosView.rating = Double(rating!/2)
         
         // Called when user finishes changing the rating by lifting the finger from the view.

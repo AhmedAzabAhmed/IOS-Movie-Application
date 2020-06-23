@@ -35,6 +35,10 @@ class HomeMovies: UICollectionViewController, UICollectionViewDelegateFlowLayout
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let viewWidth = view.frame.size.width
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: (viewWidth - 10) * 0.5, height: 240)
+        
         let homePresenter : HomePresenter = HomePresenter(homeView: self)
         homePresenter.getMovies(orderBy: "popularity")
         showLoading()
@@ -113,7 +117,7 @@ class HomeMovies: UICollectionViewController, UICollectionViewDelegateFlowLayout
         self.navigationController?.pushViewController(movieData!, animated: true)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         //        let viewHeight = view.frame.size.height
         let viewWidth = view.frame.size.width
@@ -124,7 +128,7 @@ class HomeMovies: UICollectionViewController, UICollectionViewDelegateFlowLayout
         else {
             return CGSize(width: (viewWidth * 0.5), height: 240)
         }
-    }
+    }*/
 }
 extension HomeMovies : IHomeView{
     
